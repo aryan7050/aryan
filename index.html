@@ -1,7 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .header_text {
+        color: #333;
+      }
+
+      .social-link {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+      }
+
+      .gif_container {
+        margin-top: 20px;
+      }
+
+      .buttons {
+        margin-top: 20px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      #yesButton {
+        background-color: #27ae60;
+        color: #fff;
+      }
+
+      #noButton {
+        background-color: #e74c3c;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -9,7 +60,8 @@
         <h1 class="header_text">Do you wanna go out with me?</h1>
       </div>
       <p>
-        <a href="https://www.instagram.com/aryanraj.10x/">@aryanraj.10x</a>
+        Connect with me on Instagram: 
+        <a class="social-link" href="https://www.instagram.com/aryanraj.10x/" target="_blank">@aryanraj.10x</a>
       </p>
       <div class="gif_container">
         <img
@@ -27,26 +79,24 @@
         >
           No
         </button>
-
-        <script>
-          function nextPage() {
-            window.location.href = "yes.html";
-          }
-
-          function moveButton() {
-            var x =
-              Math.random() *
-              (window.innerWidth -
-                document.getElementById("noButton").offsetWidth);
-            var y =
-              Math.random() *
-              (window.innerHeight -
-                document.getElementById("noButton").offsetHeight);
-            document.getElementById("noButton").style.left = `${x}px`;
-            document.getElementById("noButton").style.top = `${y}px`;
-          }
-        </script>
       </div>
     </div>
+
+    <script>
+      function nextPage() {
+        window.location.href = "yes.html";
+      }
+
+      function moveButton() {
+        var x =
+          Math.random() *
+          (window.innerWidth - document.getElementById("noButton").offsetWidth);
+        var y =
+          Math.random() *
+          (window.innerHeight - document.getElementById("noButton").offsetHeight);
+        document.getElementById("noButton").style.left = `${x}px`;
+        document.getElementById("noButton").style.top = `${y}px`;
+      }
+    </script>
   </body>
 </html>
